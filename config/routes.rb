@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  authenticated :user, ->(user) { user.admin? } do
+    get 'admin', to: 'admin#index'
+    get 'admin/uploads'
+    get 'admin/users'
+    get 'admin/show_upload'
+  end
+
   root 'pages#landing'
 
   get 'users/profile'

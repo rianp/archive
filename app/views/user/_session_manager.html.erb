@@ -4,6 +4,7 @@
       <%= current_user.username %>
     </a>
     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
+      <li><%= link_to "admin", admin_path, class:"dropdown-item" if current_user.admin? %></li>
       <li><%= link_to "upload asset", new_upload_path, class:"dropdown-item" %></li>
       <li><a class="dropdown-item" href="#">Action</a></li>
       <li><%= link_to "edit account", edit_user_registration_path, class: "dropdown-item" %></li>

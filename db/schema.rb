@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_12_174839) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_12_185834) do
   create_table "uploads", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_174839) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.integer "views", default: 0
+    t.integer "role"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
