@@ -11,10 +11,14 @@ User.create(username: "rian", email: "rian@example.com", password: "password", p
 User.create(username: "fifi", email: "fifi@example.com", password: "password", password_confirmation: "password", role: User.roles[:admin])
 User.create(username: "lambo", email: "lambo@example.com", password: "password", password_confirmation: "password")
 
-10.times do |x|
-  Upload.create(name: "Cool #{x} Name", 
+5.times do |x|
+  Upload.create(name: "Fave #{x} Model", 
+    description: "Try #{x} times to find a better #{x}",
+    user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/scooter_poster.jpg'), filename: 'scooter_poster.jpg')
+  
+    Upload.create(name: "Cool #{x} Name", 
                 description: "This #{x} is a description of #{x}",
-                user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/swirl.jpg'), filename: 'swirl.jpg')
+                user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/green.png'), filename: 'green.png')
   
   Upload.create(name: "Happy #{x} Asset", 
                 description: "Nice #{x} describing a way cute #{x}",
