@@ -1,0 +1,33 @@
+<div id="<%= dom_id upload %>">
+
+  <div class="card border-fill box-rounded h-100" style="width: 18rem;">
+    <img src="assets/<%= upload.thumbnail %>" class="card-img-top top-rounded" />
+    <div class="card-body">
+      <p class="card-text">
+        <strong>Name:</strong>
+        <%= upload.name %>
+        <br/>
+        <strong>Description:</strong>
+        <%= upload.description %>
+      </p>
+      <p class="text-center">
+        <%= link_to "View", upload %>
+      </p>
+    </div>
+  </div>
+
+  <%# <div class="card border-dark h-100">
+        <a href="{% url 'project_detail' project.pk %}">
+          <img src="{{ project.image.url }}" class="card-img-top" alt="project-preview">
+        </a>
+        <div class="card-body">
+          <a href="{% url 'project_detail' project.pk %}">
+            <h5 id="section-heading" class="card-title">{{ project.title }}</h5>
+          </a>
+          <p class="card-text">{{ project.description }}</p>
+        </div>
+      </div> %>
+
+
+
+</div>

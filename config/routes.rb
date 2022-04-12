@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :uploads
   root 'pages#landing'
-  get 'browse', to: 'pages#browse'
+  get 'browse', to: 'uploads#index'
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'resources', to: 'pages#resources'

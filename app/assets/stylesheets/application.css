@@ -16,19 +16,19 @@
   padding: 0 20px;
 }
 
-.nav-colored {
-  background: #b5f9e5;
-  border-color: #192eee;
-  border-style: solid;
-  border-width: 5px;
+.nav-rounded {
   border-radius: 50px;
 }
 
-.box-rounded {
+.border-fill {
   background: #b5f9e5;
   border-color: #192eee;
   border-style: solid;
   border-width: 5px;
+  box-shadow: 12px 15px 20px #192eee;
+}
+
+.box-rounded {
   border-radius: 50px;
   text-align: center;
 }
@@ -38,11 +38,18 @@
   margin: auto;
 }
 
-.box-footer {
-  border-radius: 25px 25px 0px 0px;
+.top-rounded {
+  border-radius: 50px 50px 0px 0px;
 }
 
 .cripping-header {
   margin: 25px 0;
   font-size: 8em;
+  text-align: center;
+}
+
+.page-header {
+  margin: 50px 0;
+  font-size: 5em;
+  text-align: center;
 }

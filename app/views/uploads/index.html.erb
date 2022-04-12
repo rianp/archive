@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="container col-10 p-5 box-rounded border-fill bg-white">
+  <h1 class="text-center">browse all assets</h2>
+  <p class="text-center">
+    <%= link_to "New upload", new_upload_path %>
+  </p>
+  <hr>
+  <div class="row d-flex justify-content-between mx-auto">
+    <% @uploads.each do |upload| %>
+      <div id="uploads" class="col-lg-4 col-md-8 col-sm-12 p-5">
+        <%= render upload %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
