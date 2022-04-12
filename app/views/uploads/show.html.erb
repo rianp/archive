@@ -1,9 +1,9 @@
-<div class="text-center box-med box-rounded border-fill bg-white p-5">
+<div class="text-center box-med box-rounded border-fill bg-white mt-5 p-5">
   <h1><%= @upload.name %></h1>
   <h6><%= pluralize(@upload.views, "view") %></h6>
 
   <div class="mx-auto">
-    <img src="assets/<%= @upload.thumbnail %>" />
+    <img src="<%= @upload.thumbnail %>" />
     <br/>
     <%= @upload.description %>
   </div>
@@ -12,7 +12,7 @@
     <%= link_to "Edit", edit_upload_path(@upload) %> |
     <%= link_to "Back", uploads_path %>
 
-    <%= button_to "Destroy this upload", @upload, method: :delete %>
+    <%= button_to "delete", @upload, method: :delete %>
   </div>
 
 </div>

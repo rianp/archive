@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(email: "admin@example.com", password: "password", password_confirmation: "password")
-User.create(email: "rian@example.com", password: "password", password_confirmation: "password")
-User.create(email: "fifi@example.com", password: "password", password_confirmation: "password")
+User.create(username: "admin", email: "admin@example.com", password: "password", password_confirmation: "password")
+User.create(username: "rian", email: "rian@example.com", password: "password", password_confirmation: "password")
+User.create(username: "fifi", email: "fifi@example.com", password: "password", password_confirmation: "password")
 
 10.times do |x|
   Upload.create(name: "Cool #{x} Name", 
