@@ -1,5 +1,5 @@
  .bg-swirl {
-  background-image: url('swirl.jpg');
+  background-image: url("swirl.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

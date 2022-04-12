@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :uploads
+  has_many :uploads, dependent: :destroy
 
   enum role: [:user, :admin]
   after_initialize :set_default_role, if: :new_record?

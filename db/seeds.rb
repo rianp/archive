@@ -14,16 +14,13 @@ User.create(username: "lambo", email: "lambo@example.com", password: "password",
 10.times do |x|
   Upload.create(name: "Cool #{x} Name", 
                 description: "This #{x} is a description of #{x}",
-                thumbnail: "pink.jpg",
-                user_id: User.first.id)
+                user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/swirl.jpg'), filename: 'swirl.jpg')
   
   Upload.create(name: "Happy #{x} Asset", 
                 description: "Nice #{x} describing a way cute #{x}",
-                thumbnail: "purple.jpg",
-                user_id: User.first.id)
+                user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/purple.jpg'), filename: 'purple.jpg')
 
   Upload.create(name: "Whoa #{x} File", 
                 description: "This #{x} is the best #{x} thingy",
-                thumbnail: "swirl.jpg",
-                user_id: User.first.id) 
+                user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/pink.jpg'), filename: 'pink.jpg')
 end
