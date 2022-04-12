@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 h3">
         <li class="nav-item nav-pad">
-          <%= link_to "home", root_path, class: 'nav-link' %>
+          <%= link_to "Cripping CG", root_path, class:'nav-link' %>
         </li>
         <li class="nav-item nav-pad">
           <%= link_to "browse", browse_path, class: 'nav-link' %>
@@ -15,12 +15,27 @@
           <%= link_to "about", about_path, class: 'nav-link' %>
         </li>
         <li class="nav-item nav-pad">
-          <%= link_to "contact us", contact_path, class: 'nav-link' %>
+          <%= link_to "contact", contact_path, class: 'nav-link' %>
         </li>
         <li class="nav-item nav-pad">
           <%= link_to "resource web", resources_path, class: 'nav-link' %>
         </li>
       </ul>
+      <ul class="navbar-nav h3">
+        <li class="nav-item dropdown nav-pad">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
+              <li><%= link_to "upload asset", new_upload_path, class:"dropdown-item" %></li>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+  </div>
     </div>
   </div>
 </nav>

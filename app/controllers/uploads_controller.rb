@@ -8,6 +8,7 @@ class UploadsController < ApplicationController
 
   # GET /uploads/1 or /uploads/1.json
   def show
+    @upload.update(views: @upload.views + 1)
   end
 
   # GET /uploads/new

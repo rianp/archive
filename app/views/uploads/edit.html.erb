@@ -1,10 +1,13 @@
-<h1>Editing upload</h1>
+<div class="text-center box-med box-rounded border-fill bg-white p-5">
+  <h1>edit asset</h1>
 
-<%= render "form", upload: @upload %>
+  <%= render "form", upload: @upload %>
 
-<br>
+  <br>
 
+  <div>
+    <%= link_to "view", @upload %> |
+    <%= link_to "back", uploads_path %>
+  </div>
 <div>
-  <%= link_to "Show this upload", @upload %> |
-  <%= link_to "Back to uploads", uploads_path %>
-</div>
+

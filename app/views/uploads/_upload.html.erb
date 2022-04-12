@@ -3,13 +3,11 @@
   <div class="card border-fill box-rounded h-100" style="width: 18rem;">
     <img src="assets/<%= upload.thumbnail %>" class="card-img-top top-rounded" />
     <div class="card-body">
-      <p class="card-text">
-        <strong>Name:</strong>
-        <%= upload.name %>
-        <br/>
-        <strong>Description:</strong>
-        <%= upload.description %>
-      </p>
+      <div class="card-text">
+        <h1><%= upload.name %></h1>
+        <p><%= upload.description %></p>
+        <p><%= pluralize(upload.views, "view") %></p>
+      </div>
       <p class="text-center">
         <%= link_to "View", upload %>
       </p>
