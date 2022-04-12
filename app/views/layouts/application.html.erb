@@ -11,10 +11,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <header>
-    <%= render 'layouts/navbar' %>
-  </header>
   <body class="bg-swirl">
+    <header>
+      <%= render 'layouts/navbar' %>
+      <%= render 'layouts/alerts' %>
+    </header>
     <main>
       <%= yield %>
     </main>

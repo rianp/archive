@@ -4,7 +4,8 @@
     <img src="assets/<%= upload.thumbnail %>" class="card-img-top top-rounded" />
     <div class="card-body">
       <div class="card-text">
-        <h1><%= upload.name %></h1>
+        <h2><%= upload.name %></h2>
+        <h4><%= upload.user.email %></h4>
         <p><%= upload.description %></p>
         <p><%= pluralize(upload.views, "view") %></p>
       </div>
