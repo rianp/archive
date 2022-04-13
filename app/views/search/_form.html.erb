@@ -1,0 +1,6 @@
+    <%= search_form_for(@query, url: search_path, method: :get, class:'d-flex border-fill box-rounded') do |f| %>
+      <%= f.search_field :name_or_description_or_user_email_or_user_username_i_cont_any, 
+        placeholder: "example: 'cool scooter glb'",
+        class: "form-control box-rounded mx-3 my-2 px-5 fs-4 text-start" %>
+      <%= f.submit "search", class:"btn p-3 me-3 fs-4" %>
+    <% end %>

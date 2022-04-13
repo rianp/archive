@@ -1,18 +1,17 @@
 <div id="<%= dom_id upload %>">
-
-    <div class="card border-fill box-rounded" style="width: 18rem;">
-      <img src="<%= (url_for(upload.thumbnail)) %>" class="w-100 top-rounded">
-      <div class="card-body">
-        <div class="card-text">
-          <h2><%= upload.name %></h2>
-          <h4>by <%= link_to upload.user.username, user_path(upload.user) %></h4>
-          <p><%= upload.description %></p>
-          <p><%= pluralize(upload.views, "view") %></p>
-        </div>
-        <p class="text-center">
-          <%= link_to "View", upload %>
-        </p>
+  
+  <div class="border-fill box-rounded card-size my-5">
+    <a href="<%= upload_path(upload) %>">
+      <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded card-img">
+    </a>
+    <div class="card-body">
+      <div class="card-text">
+        <h2><%= upload.name %></h2>
+        <h4>by <%= link_to upload.user.username, user_path(upload.user) %></h4>
+        <p class="fs-5"><%= upload.description %></p>
+        <p class="fs-5"><%= pluralize(upload.views, "view") %></p>
       </div>
     </div>
+  </div>
 
 </div>
