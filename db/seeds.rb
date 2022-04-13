@@ -13,10 +13,10 @@ User.create(username: "lambo", email: "lambo@example.com", password: "password",
 
 5.times do |x|
   Upload.create(name: "Fave #{x} Model", 
-    description: "Try #{x} times to find a better #{x}",
-    user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/scooter_poster.jpg'), filename: 'scooter_poster.jpg')
+                description: "Try #{x} times to find a better #{x}",
+                user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/scooter_poster.jpg'), filename: 'scooter_poster.jpg')
   
-    Upload.create(name: "Cool #{x} Name", 
+  Upload.create(name: "Cool #{x} Name", 
                 description: "This #{x} is a description of #{x}",
                 user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/green.png'), filename: 'green.png')
   
@@ -28,3 +28,8 @@ User.create(username: "lambo", email: "lambo@example.com", password: "password",
                 description: "This #{x} is the best #{x} thingy",
                 user_id: User.first.id).thumbnail.attach(io: File.open('app/assets/images/seeds/pink.jpg'), filename: 'pink.jpg')
 end
+
+Upload.all.each do |upload|
+  upload.file.attach(io: File.open('app/assets/images/seeds/scooter.glb'), filename: 'scooter.glb')
+end
+
