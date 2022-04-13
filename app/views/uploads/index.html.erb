@@ -3,9 +3,9 @@
     <h1 class="page-header">archive</h1>
     <%= render 'search/form' %>
 
-    <div class="row d-flex justify-content-between my-5 mx-auto">
+    <div class="upload-gallery justify-content-around my-5 mx-auto">
       <% @uploads.each do |upload| %>
-        <div id="uploads" class="col-lg-4 col-md-8 col-sm-12 p-5">
+        <div id="uploads">
           <%= render upload %>
         </div>
       <% end %>
