@@ -12,4 +12,7 @@ class AdminController < ApplicationController
   def show_upload
     @upload = Upload.includes(:user).find(params[:id])
   end
+
+  private
+
 end
