@@ -5,8 +5,9 @@
     </a>
     <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdownMenuLink">
       <li><%= link_to "admin", admin_path, class:"dropdown-item" if current_user.admin? %></li>
-      <li><%= link_to "upload asset", new_upload_path, class:"dropdown-item" %></li>
-      <li><a class="dropdown-item" href="#">Action</a></li>
+      <% if current_user.admin? %><li><hr class="dropdown-divider"></li><% end %>
+      <li><%= link_to "upload new asset", new_upload_path, class:"dropdown-item" %></li>
+      <li><%= link_to "manage assets", new_upload_path, class:"dropdown-item" %></li>
       <li><%= link_to "edit account", edit_user_registration_path, class: "dropdown-item" %></li>
       <li><hr class="dropdown-divider"></li>
       <li><%= button_to "sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>

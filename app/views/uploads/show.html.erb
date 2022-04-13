@@ -1,9 +1,17 @@
 <div class="text-center box-med box-rounded border-fill bg-white mt-5 p-5">
   <h1><%= @upload.name %></h1>
+  <h4>by <%= link_to @upload.user.username, user_path(@upload.user) %></h4>
   <h6><%= pluralize(@upload.views, "view") %></h6>
+  <br/>
+
+  <!-- make this section conditional: display appropriate viewer depending on file type -->
+  <!-- if file is glb/gltf -->
+  <%= render 'uploads/3d_viewer', upload: @upload %>
+  <!-- elsif file is jpg/png/gif -->
+  <!-- elsif file is mp4 -->
+  <!-- elsif file is fbx: need to find viewer that can take this filetype -->
 
   <div class="mx-auto">
-    <img src="<%= @upload.thumbnail %>" />
     <br/>
     <%= @upload.description %>
   </div>
