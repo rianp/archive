@@ -1,20 +1,22 @@
 <div class="container">
   <div class="mt-5 p-5 box-rounded border-fill bg-white">
 
-    <div class="d-flex justify-content-around mx-auto p-3">
-      <div class="col-3">
+    <div class="profile-box">
+      <div class="border-fill box-rounded col-4 p-3 my-3">
         <img src="<%= (url_for(@user.avatar)) %>" class="avatar">
-        <h1 class="pt-2"><%= @user.username %></h1>
-        <h4>member since: <%= @user.created_at %></h4>
-        <h4><%= pluralize(@user.views, "view") %></h4>
+        <div class="my-3">
+          <h1 class="pt-2"><%= @user.username %></h1>
+          <h4>member since: <%= @user.created_at.strftime("%B") %> <%= @user.created_at.year %></h4>
+          <h4><%= pluralize(@user.views, "view") %></h4>
+        </div>
       </div>
 
-      <div class="col-7">
-        <p class="fs-5 py-5"><%= @user.bio %></p>
+      <div class="col-6 py-5">
+        <p class="fs-4"><%= @user.bio %></p>
       </div>
     </div>
 
-    <h1 class="my-3"><%= pluralize(Upload.where(user_id: @user).count, "assets") %></h6>
+    <h1><%= pluralize(Upload.where(user_id: @user).count, "assets") %></h6>
     <hr>
     <div class="upload-gallery justify-content-around my-2 mx-auto">
       <% Upload.where(user_id: @user).each do |upload| %>

@@ -4,7 +4,7 @@
     <%= render 'search/form' %>
 
     <div class="row d-flex justify-content-between my-5 mx-auto">
-      <h3 class="my-5">displaying <%= pluralize(@results.count, "result") %> for:  "<%= @query %>"</h3>
+      <h3 class="my-5">displaying <%= pluralize(@results.count, "result") %> for:  "<%= params[:q][:name_or_description_or_user_email_or_user_username_i_cont_any] %>"</h3>
       <p class="text-end fs-5 px-5">sort by: <%= sort_link(@query, :name, "title", default_order: :asc) %> | <%= sort_link(@query, :user_email, "users") %></p>
 
       <% @results.each do |result| %>
