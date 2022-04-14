@@ -104,8 +104,20 @@ a{
 }
 
 .avatar {
+  border-color: #192eee;
+  border-style: solid;
+  border-width: 5px;
   border-radius: 50%;
   height: 15rem;
   width: 15rem;
   object-fit: cover;
+}
+
+.profile-box {
+  height: 30rem;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5rem;
 }
