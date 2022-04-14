@@ -10,7 +10,7 @@ User.create(username: "admin",
             email: "admin@example.com", 
             password: "password", 
             password_confirmation: "password", 
-            bio: "Appears in The Thousand-Year Door as a party member. She is a boo and leader of the Boos of Boo's mansion. She is aided by her butler, Bootler, who is very overprotective of her and initially opposes her joining Mario after he defeats Tubba Blubba. She is very pompous, vain, and arrogant. Though she is strong-headed and snooty due to her princess-like status in life, but is also kind-hearted in wanting to aid Mario so that he can save Peach and the world's wishes.",
+            bio: "Appears in The Thousand-Year Door as a party member. She is a boo and leader of the Boos of Boo's mansion. She is aided by her butler, Bootler, who is very overprotective of her and initially opposes her joining Mario after he defeats Tubba Blubba. She is very pompous, vain, and arrogant. Though she is strong-headed and snooty due to her princess-like status in life, she is also kind-hearted in wanting to aid Mario so that he can save Peach and the world's wishes.",
             role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/admin.jpg'), filename: 'admin.jpg')
 User.create(username: "rian", 
             email: "rian@example.com", 
