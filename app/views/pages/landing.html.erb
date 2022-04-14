@@ -8,7 +8,7 @@
 
   <div class="mt-5 p-2 box-rounded border-fill bg-white box-med">
     <div>
-      <%= render 'pages/featured', upload: Upload.first %>
+      <%= render 'pages/featured', upload: Upload.all.shuffle.first %>
     <div>
   </div>
 </div>

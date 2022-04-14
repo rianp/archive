@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <h1><%= pluralize(Upload.where(user_id: @user).count, "assets") %></h6>
+    <h1 class="text-start mx-5 px-5"><%= pluralize(Upload.where(user_id: @user).count, "assets") %></h6>
     <hr>
     <div class="upload-gallery justify-content-around my-2 mx-auto">
       <% Upload.where(user_id: @user).each do |upload| %>
