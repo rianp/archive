@@ -7,7 +7,7 @@
         <div class="my-3">
           <h1 class="pt-2"><%= @user.username %></h1>
           <h4>member since: <%= @user.created_at.strftime("%B") %> <%= @user.created_at.year %></h4>
-          <h4><%= pluralize(@user.views, "view") %></h4>
+          <h4><i class="bi bi-eye-fill eye-color"></i> <%= @user.views %></h4>
         </div>
       </div>
 

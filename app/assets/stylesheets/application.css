@@ -24,6 +24,7 @@
 
 a{
   color: black !important;
+  text-decoration: none;
 }
 
 .nav-rounded {
@@ -87,7 +88,7 @@ a{
   border-radius: 50px 50px 0px 0px;
 }
 
-.left-rounded {
+.side-rounded {
   border-radius: 50px 50px 50px 50px;
   background: #b5f9e5;
   border-color: #192eee;
@@ -121,6 +122,29 @@ a{
   object-fit: cover;
 }
 
+.avatar {
+  border-color: #192eee;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+}
+
+.avatar-mini {
+  border-width: 2px;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.avatar-med {
+  border-width: 3px;
+  height: 5rem;
+  width: 5rem;
+}
+
+
 .profile-box {
   height: 30rem;
   position: relative;
@@ -130,3 +154,25 @@ a{
   margin-bottom: 5rem;
 }
 
+.pink-heart {
+  color: hotpink;
+}
+
+.eye-color {
+  color: yellowgreen;
+}
+
+.flag-color {
+  color: darkorange;
+}
+
+.horizontal-card-img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50px 0px 0px 50px;
+}
+
+.card-horizontal {
+  width: 20rem;
+  height: 10.6rem;
+}

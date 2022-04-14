@@ -1,35 +1,28 @@
 <div class="text-center box-med box-rounded border-fill bg-white mt-5 p-5">
-
-<div class="container-fluid">
-  <div class="row flex-nowrap">
-    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 left-rounded">
+  <div class="container-fluid">
+    <div class="row flex-wrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 side-rounded">
         <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-50">
-
           <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start py-5" id="menu">
-              <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">edit profile</span></a>
-              </li>
-              
-              <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">edit account</span> </a>
-              </li>
-              
-              <li>
-                  <a href="#" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">delete account</span> </a>
-              </li>
+            <li>
+              <a href="#" class="nav-link px-0 align-middle">
+                <i class="fs-3 bi bi-file-person"></i> <span class="ms-1 d-none d-sm-inline">profile</span></a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-0 align-middle">
+                <i class="fs-3 bi bi-sliders"></i> <span class="ms-1 d-none d-sm-inline">settings</span> </a>
+            </li>
           </ul>
           <hr>
-            
         </div>
+        <div class="pb-0">
+          <a href="#" class="nav-link px-0">
+            <i class="fs-3 bi bi bi-person-x"></i> <span class="ms-1 d-none d-sm-inline">delete account</span> </a>
+        </div>
+      </div>
+      <div class="col py-3">
+        <h1 class="my-3">edit account</h1>
+          <%= render 'devise/registrations/form' %>
+      </div>
     </div>
-
-    <div class="col py-3">
-        <%= render 'devise/registrations/form' %>
-    </div>
-
   </div>
-</div>
-
