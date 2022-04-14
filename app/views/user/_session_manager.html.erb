@@ -8,6 +8,7 @@
       <% if current_user.admin? %><li><hr class="dropdown-divider"></li><% end %>
       <li><%= link_to "upload new asset", new_upload_path, class:"dropdown-item" %></li>
       <li><%= link_to "manage assets", new_upload_path, class:"dropdown-item" %></li>
+      <li><%= link_to "edit profile", edit_user_registration_path, class: "dropdown-item" %></li>
       <li><%= link_to "edit account", edit_user_registration_path, class: "dropdown-item" %></li>
       <li><hr class="dropdown-divider"></li>
       <li><%= button_to "sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
