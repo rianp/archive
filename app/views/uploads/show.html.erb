@@ -1,4 +1,4 @@
-<div class="text-center box-med box-rounded border-fill bg-white mt-5 p-5">
+<div class="text-center box-show box-rounded border-fill bg-white mt-5 p-5">
   <h1><%= @upload.name %></h1>
   <h4>by <%= link_to @upload.user.username, user_path(@upload.user) %></h4>
   <h6><%= pluralize(@upload.views, "view") %></h6>

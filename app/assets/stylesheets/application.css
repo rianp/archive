@@ -67,8 +67,19 @@ a{
   text-align: center;
 }
 
-.box-med {
+.box-show {
+  height: 30rem;
   width: 50%;
+  margin: auto;
+}
+
+.box-med {
+  width: 75%;
+  margin: auto;
+}
+
+.box-feature {
+  width: 75%;
   margin: auto;
 }
 
@@ -88,22 +99,7 @@ a{
   text-align: center;
 }
 
-.page-container {
-  position: relative;
-}
-
-.content {
-  padding-bottom: 20rem;
-}
-
-.feature {
-  position: absolute;
-  bottom: 0;
-  width: 100%;  
-  height: 20rem;       
-}
 
 .viewer {
-  height: 30rem;
   width: 50%;
 }
