@@ -4,7 +4,7 @@
     <%= render 'search/form' %>
 
     <div class="upload-gallery justify-content-around my-5 mx-auto">
-      <% @uploads.each do |upload| %>
+      <% @uploads.shuffle.each do |upload| %>
         <div id="uploads">
           <%= render upload %>
         </div>

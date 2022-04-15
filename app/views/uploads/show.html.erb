@@ -1,26 +1,83 @@
-<div class="text-center box-show box-rounded border-fill bg-white mt-5 p-5">
-  <h1><%= @upload.name %></h1>
-  <h4>by <%= link_to @upload.user.username, user_path(@upload.user) %></h4>
-  <h6><%= pluralize(@upload.views, "view") %></h6>
-  <br/>
+<div class="container">
+  <div class="text-center box-rounded border-fill bg-white mt-5 p-5">
+    <div class="row d-flex justify-content-between mx-auto">
 
-  <!-- make this section conditional: display appropriate viewer depending on file type -->
-  <!-- if file is glb/gltf -->
-  <%= render 'uploads/3d_viewer', upload: @upload %>
-  <!-- elsif file is jpg/png/gif -->
-  <!-- elsif file is mp4 -->
-  <!-- elsif file is fbx: need to find viewer that can take this filetype -->
+      <!-- left column: asset/user info -->
+      <div class="col-7">
+        <div class="text-start fs-4">
+          <%= link_to "Back", :back %>
+        </div>
+        
+        <!-- make this section conditional: display appropriate viewer depending on file type -->
+        <!-- if file is glb/gltf -->
+        <%= render 'uploads/3d_viewer', upload: @upload %>
+        <!-- elsif file is jpg/png/gif -->
+        <!-- elsif file is mp4 -->
+        <!-- elsif file is fbx: need to find viewer that can take this filetype -->
+        
+        <h1><%= @upload.name %></h1>
 
-  <div class="mx-auto">
-    <br/>
-    <%= @upload.description %>
+
+        <div class="d-flex flex-wrap justify-content-between m-3">
+          <div class="d-flex flex-wrap justify-content-start mx-3">
+            <div class="px-3">
+              <a href="<%= user_path(@upload.user) %>">
+                <img src="<%= (url_for(@upload.user.avatar)) %>" class="avatar avatar-med">
+              </a>
+            </div>
+            <div class="p-3">
+              <p class="fs-3"><%= link_to @upload.user.username, user_path(@upload.user) %></p>
+            </div>
+          </div>
+          <div class="d-flex flex-wrap justify-content-end mx-3">
+            <div>
+              <p class="fs-4 p-3"><i class="bi bi-heart-fill pink-heart"></i> 4</p>
+            </div>
+            <div>
+              <p class="fs-4 p-3"><i class="bi bi-eye-fill eye-color"></i> <%= @upload.views %></p>
+            </div>
+            <div>
+              <p class="fs-4 p-3"><i class="bi bi-flag-fill flag-color"></i></p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+
+        <!-- asset information -->
+        <div class="fs-5 pt-5 text-start mx-auto">
+          <%= @upload.description %>
+          <br/>
+          <p class="fs-5">lots more asset information</p>
+          <p class="fs-5">lots more asset information</p>
+          <p class="fs-5">lots more asset information</p>
+          <p class="fs-5">lots more asset information</p>
+          <p class="fs-5">lots more asset information</p>
+        </div>
+      </div>
+
+      <!-- right sidebar: links -->
+      <div class="col-4 side-rounded">
+        <div class="text-start p-4 mb-4">
+          <h2 class="text-start">in collections</h2>
+          <p class="fs-5">collection 1</p>
+          <p class="fs-5">collection 2</p>
+          <p class="fs-5">collection 3</p>
+        </div>
+        <div class="mt-2">
+          <h2 class="text-start mt-2 px-4">more by <%= @upload.user.username %></h2>
+          <div class="upload-gallery justify-content-around mx-auto">
+            <% Upload.where(user_id: @upload.user).limit(3).each do |upload| %>
+              <div id="uploads">
+                <%= render 'uploads/upload_horizontal', upload: upload %>
+              </div>
+            <% end %>
+          </div>
+          <a href="<%= user_path(@upload.user) %>">
+            <p class="fs-4 my-3">view all by <%= @upload.user.username %></p>
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-  <div>
-    <%= link_to "Edit", edit_upload_path(@upload) %> |
-    <%= link_to "Back", uploads_path %>
-
-    <%= button_to "delete", @upload, method: :delete %>
-  </div>
-
 </div>

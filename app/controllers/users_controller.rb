@@ -4,6 +4,9 @@ class UsersController < ApplicationController
     @user.update(views: @user.views + 1)
   end
 
+  def manage_assets
+  end
+
   private
 
   def set_user 
