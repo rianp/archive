@@ -10,19 +10,24 @@ User.create(username: "admin",
             email: "admin@example.com", 
             password: "password", 
             password_confirmation: "password", 
+            tagline: "confused 3d artist",
             bio: "Appears in The Thousand-Year Door as a party member. She is a boo and leader of the Boos of Boo's mansion. She is aided by her butler, Bootler, who is very overprotective of her and initially opposes her joining Mario after he defeats Tubba Blubba. She is very pompous, vain, and arrogant. Though she is strong-headed and snooty due to her princess-like status in life, she is also kind-hearted in wanting to aid Mario so that he can save Peach and the world's wishes.",
+            website: "https://petfinder.com",
             role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/admin.jpg'), filename: 'admin.jpg')
 User.create(username: "rian", 
             email: "rian@example.com", 
             password: "password", 
             password_confirmation: "password", 
+            tagline: "game developer/artist/engineer", 
             bio: "A member of the heavenly race known as the Nimbis. She is the daughter of Queen Jaydes of the Underwhere and King Grambi of the Overthere. She is quite kind-hearted and brave. This is especially shown when, once she finds out that the Overthere has been invaded by Bonechill and an army of Skellobits, she is one of the most eager of the Nimbis to assemble the rest and fight back. It is also revealed by the end of her featured chapter that she is actually the physical form of a Pure Heart who was created so that it could be kept safe and hidden from those who would abuse its power.",
             role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/candy.jpg'), filename: 'candy.jpg')
 User.create(username: "fifi", 
             email: "fifi@example.com", 
             password: "password", 
             password_confirmation: "password", 
+            tagline: "shoebill stork",
             bio: "One of the two rare Ratooeies that appear at Rogueport's docks. He is on a mission to find oil in Dry Dry Desert and Dry Dry Outpost. Mario can choose to give Lumpy 100, 200, or 300 coins for his quest, but it is not a requirement. If Mario gives him 100 coins, later Lumpy will give Mario 300 coins. If he gives Lumpy 200, he will bring back 600. And finally, if Mario give Lumpy 300, he will bring back the maximum number of coins: 999.",
+            website: "https://fifikim.com",
             role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/wingo.jpeg'), filename: 'wingo.jpeg')
             
 10.times.each do |x|
