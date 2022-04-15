@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'users/profile'
   get '/u/:id', to: 'users#profile', as: 'user'
 
+  get 'users/manage'
+
   resources :uploads
   
   get 'search', to: 'search#index'
