@@ -1,31 +1,10 @@
 <div class="text-center box-med box-rounded border-fill bg-white mt-5 p-5">
   <div class="container-fluid">
     <div class="row flex-wrap">
-      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 side-rounded">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 min-vh-50">
-          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start py-5" id="menu">
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-                <span class="ms-1 d-none d-sm-inline">profile</span></a>
-            </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-                <span class="ms-1 d-none d-sm-inline">email</span> </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle"><span class="ms-1 d-none d-sm-inline">password</span> </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-                <span class="ms-1 d-none d-sm-inline">account</span> </a>
-            </li>
-          </ul>
-          <hr>
-        </div>
-      </div>
+      <%= render 'devise/registrations/side_nav' %>
       <div class="col py-3">
         <h1 class="my-3">edit account</h1>
-          <%= render 'devise/registrations/form' %>
+          <%= render 'devise/registrations/profile' %>
       </div>
     </div>
   </div>

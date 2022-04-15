@@ -13,7 +13,11 @@
         <div class="d-flex justify-content-around mx-3 pt-2">
           <div>
             <a href="<%= user_path(upload.user) %>">
-              <img src="<%= (url_for(upload.user.avatar)) %>" class="avatar avatar-mini">
+              <% if upload.user.avatar.attached? %>
+                <img src="<%= (url_for(upload.user.avatar)) %>" class="avatar avatar-mini">
+              <% else %>
+                <%= image_tag "avatar.png", class: "avatar avatar-mini" %>
+              <% end %>
             </a>
           </div>
           <div>

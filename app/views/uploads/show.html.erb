@@ -22,7 +22,11 @@
           <div class="d-flex flex-wrap justify-content-start mx-3">
             <div class="px-3">
               <a href="<%= user_path(@upload.user) %>">
-                <img src="<%= (url_for(@upload.user.avatar)) %>" class="avatar avatar-med">
+                <% if upload.user.avatar.attached? %>
+                  <img src="<%= (url_for(upload.user.avatar)) %>" class="avatar avatar-med">
+                <% else %>
+                  <%= image_tag "avatar.png", class: "avatar avatar-med" %>
+                <% end %>
               </a>
             </div>
             <div class="p-3">
