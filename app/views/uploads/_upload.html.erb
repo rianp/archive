@@ -2,7 +2,11 @@
   
   <div class="border-fill box-rounded card-size my-5">
     <a href="<%= upload_path(upload) %>">
-      <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded card-img">
+      <% if upload.thumbnail.attached? %>
+        <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded card-img">
+      <% else %>
+        <%= image_tag "avatar.png", class: "top-rounded card-img" %>
+      <% end %>
     </a>
     <div class="card-body">
       <div class="card-text">
@@ -13,7 +17,11 @@
         <div class="d-flex justify-content-around mx-3 pt-2">
           <div>
             <a href="<%= user_path(upload.user) %>">
-              <img src="<%= (url_for(upload.user.avatar)) %>" class="avatar avatar-mini">
+              <% if upload.user.avatar.attached? %>
+                <img src="<%= (url_for(upload.user.avatar)) %>" class="avatar avatar-mini">
+              <% else %>
+                <%= image_tag "avatar.png", class: "avatar avatar-mini" %>
+              <% end %>
             </a>
           </div>
           <div>

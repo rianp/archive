@@ -11,7 +11,13 @@
     </div>
 
     <div>
-      <%= render 'uploads/3d_viewer', upload: upload %>
+      <% if upload.file.attached? %>
+        <%= render 'uploads/3d_viewer', upload: upload %>
+      <% elsif upload.thumbnail.attached? %>
+        <img src="<%= (url_for(upload.thumbnail)) %>" class="avatar">
+      <% else %>
+        <img src="<%= (url_for(@user.avatar)) %>" class="avatar">
+      <% end %>
     </div>
 
   </div>

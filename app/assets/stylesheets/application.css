@@ -176,3 +176,9 @@ a{
   width: 20rem;
   height: 10.6rem;
 }
+
+.viewer-img {
+  width: 40rem;
+  height: 30rem;
+  object-fit: cover;
+}

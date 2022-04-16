@@ -8,21 +8,31 @@
           <%= link_to "Back", :back %>
         </div>
         
-        <!-- make this section conditional: display appropriate viewer depending on file type -->
         <!-- if file is glb/gltf -->
-        <%= render 'uploads/3d_viewer', upload: @upload %>
+        <% if @upload.file.attached? %>
+          <%= render 'uploads/3d_viewer', upload: @upload %>
         <!-- elsif file is jpg/png/gif -->
-        <!-- elsif file is mp4 -->
-        <!-- elsif file is fbx: need to find viewer that can take this filetype -->
-        
-        <h1><%= @upload.name %></h1>
+        <% elsif @upload.thumbnail.attached? %>
+          <img src="<%= (url_for(@upload.thumbnail)) %>" class="viewer-img">
+                
+        <!-- to do: elsif file is mp4 -->
+        <!-- to do: elsif file is fbx: need to find viewer that can take this filetype -->
+        <!-- to do: replace else case image with no pic image -->
+        <% else %>
+          <%= image_tag "avatar.png", class: "viewer-img" %>
+        <% end %>
 
+        <h1><%= @upload.name %></h1>
 
         <div class="d-flex flex-wrap justify-content-between m-3">
           <div class="d-flex flex-wrap justify-content-start mx-3">
             <div class="px-3">
               <a href="<%= user_path(@upload.user) %>">
-                <img src="<%= (url_for(@upload.user.avatar)) %>" class="avatar avatar-med">
+                <% if @upload.user.avatar.attached? %>
+                  <img src="<%= (url_for(@upload.user.avatar)) %>" class="avatar avatar-med">
+                <% else %>
+                  <%= image_tag "avatar.png", class: "avatar avatar-med" %>
+                <% end %>
               </a>
             </div>
             <div class="p-3">
