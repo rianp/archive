@@ -3,7 +3,11 @@
   <div class="d-flex border-fill box-rounded card-horizontal my-3">
     <div>
       <a href="<%= upload_path(upload) %>">
-        <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded horizontal-card-img">
+        <% if upload.thumbnail.attached? %>
+          <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded horizontal-card-img">
+        <% else %>
+          <%= image_tag "avatar.png", class: "top-rounded horizontal-card-img" %>
+        <% end %>
       </a>
     </div>
     <div>
