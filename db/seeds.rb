@@ -13,14 +13,14 @@ User.create(username: "admin",
             tagline: "confused 3d artist",
             bio: "Appears in The Thousand-Year Door as a party member. She is a boo and leader of the Boos of Boo's mansion. She is aided by her butler, Bootler, who is very overprotective of her and initially opposes her joining Mario after he defeats Tubba Blubba. She is very pompous, vain, and arrogant. Though she is strong-headed and snooty due to her princess-like status in life, she is also kind-hearted in wanting to aid Mario so that he can save Peach and the world's wishes.",
             website: "https://petfinder.com",
-            role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/admin.jpg'), filename: 'admin.jpg')
+            role: User.roles[:admin])
 User.create(username: "rian", 
             email: "rian@example.com", 
             password: "password", 
             password_confirmation: "password", 
             tagline: "game developer/artist/engineer", 
             bio: "A member of the heavenly race known as the Nimbis. She is the daughter of Queen Jaydes of the Underwhere and King Grambi of the Overthere. She is quite kind-hearted and brave. This is especially shown when, once she finds out that the Overthere has been invaded by Bonechill and an army of Skellobits, she is one of the most eager of the Nimbis to assemble the rest and fight back. It is also revealed by the end of her featured chapter that she is actually the physical form of a Pure Heart who was created so that it could be kept safe and hidden from those who would abuse its power.",
-            role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/candy.jpg'), filename: 'candy.jpg')
+            role: User.roles[:admin])
 User.create(username: "fifi", 
             email: "fifi@example.com", 
             password: "password", 

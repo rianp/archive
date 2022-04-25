@@ -73,3 +73,4 @@ end
 
 gem 'devise'
 gem "ransack", "~> 3.0"
+gem "aws-sdk-s3", require: false
