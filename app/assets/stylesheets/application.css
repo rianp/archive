@@ -1,10 +1,9 @@
- .bg-swirl {
+.bg-swirl {
   background-image: url("swirl.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-
 
 .upload-gallery {
   display: flex;
@@ -25,6 +24,10 @@
 a{
   color: black !important;
   text-decoration: none;
+}
+
+a:hover {
+  color: #192eee !important;
 }
 
 .nav-rounded {
@@ -122,26 +125,21 @@ a{
   object-fit: cover;
 }
 
-.avatar {
-  border-color: #192eee;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 50%;
-  height: 15rem;
-  width: 15rem;
-  object-fit: cover;
+.avatar-liked {
+  height: 2rem;
+  width: 2rem;
 }
 
 .avatar-mini {
-  border-width: 2px;
   height: 2.5rem;
   width: 2.5rem;
 }
 
 .avatar-med {
-  border-width: 3px;
-  height: 5rem;
-  width: 5rem;
+  border-radius: 10%;
+  height: 3rem;
+  width: 3rem;
+  object-fit: cover;
 }
 
 
@@ -159,17 +157,18 @@ a{
 }
 
 .eye-color {
-  color: yellowgreen;
+  color: darkorange;
 }
 
-.flag-color {
-  color: darkorange;
+.cloud-color {
+  color: #192eee;
 }
 
 .horizontal-card-img {
   height: 10rem;
   width: 10rem;
   border-radius: 50px 0px 0px 50px;
+  object-fit: cover;
 }
 
 .card-horizontal {
@@ -178,7 +177,58 @@ a{
 }
 
 .viewer-img {
-  width: 40rem;
-  height: 30rem;
+  width: 100%;
+  height: 28rem;
   object-fit: cover;
+}
+
+.btn-outline-primary {
+  border-color: #192eee !important;
+  color: #192eee !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #192eee !important;
+  color: white !important;
+}
+
+.bg-blue {
+  background-color: #192eee !important;
+  border-color: #192eee !important;
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+}
+
+.bg-mint {
+  background-color: #b5f9e5 !important;
+  border-color: #192eee !important;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.btn-primary {
+  background-color: #192eee !important;
+}
+
+.btn-outline-danger {
+  border-color: hotpink !important;
+  color: hotpink !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: hotpink !important;
+  color: white !important;
+}
+
+.a-gray {
+    color: gray !important;
+}
+
+.left-rounded {
+  border-radius: 50px 0 0 50px;
+}
+
+.right-rounded {
+  border-radius: 0 50px 50px 0;
 }
