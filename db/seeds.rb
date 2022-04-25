@@ -30,7 +30,7 @@ User.create(username: "fifi",
             website: "https://fifikim.com",
             role: User.roles[:admin]).avatar.attach(io: File.open('app/assets/images/seeds/wingo.jpeg'), filename: 'wingo.jpeg')
             
-10.times.each do |x|
+4.times.each do |x|
   Upload.create(name: "Fave #{x} Model", 
                 description: "Try #{x} times to find a better #{x}",
                 user_id: 1).thumbnail.attach(io: File.open('app/assets/images/seeds/scooter_poster.jpg'), filename: 'scooter_poster.jpg')
