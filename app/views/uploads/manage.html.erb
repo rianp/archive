@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="mt-5 p-5 box-rounded border-fill bg-white">
+    <h1 class="page-header">my assets</h1>
+    <%= render 'search/form' %>
+
+    <div class="upload-gallery justify-content-around my-5 mx-auto">
+      <% @user_uploads.each do |upload| %>
+        <div>
+          <%= render 'uploads/upload_manage', upload: upload %>
+        </div>
+      <% end %>
+    </div>
+    
+  </div>
+</div>
+
+
+
+

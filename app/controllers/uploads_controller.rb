@@ -7,9 +7,18 @@ class UploadsController < ApplicationController
     @uploads = Upload.all
   end
 
+  def manage
+    @user = current_user
+    @user_uploads = Upload.where(user_id: @user)
+  end
+
   # GET /uploads/1 or /uploads/1.json
   def show
+    @user = current_user
     @upload.update(views: @upload.views + 1)
+
+    @liked_by = @upload.likes.map { |like| User.find(like.user_id) }
+    mark_notifications_as_read
   end
 
   # GET /uploads/new
@@ -69,5 +78,12 @@ class UploadsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def upload_params
       params.require(:upload).permit(:name, :description, :thumbnail, :file, :tag_list)
+    end
+
+    def mark_notifications_as_read
+      if current_user
+        notifications_to_mark_as_read = @upload.notifications_as_upload.where(recipient: current_user)
+        notifications_to_mark_as_read.update_all(read_at: Time.zone.now)
+      end
     end
 end

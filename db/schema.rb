@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_10_004052) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_20_183812) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +53,35 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_10_004052) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "collections", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_collections_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "upload_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["upload_id"], name: "index_likes_on_upload_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "recipient_type", null: false
+    t.bigint "recipient_id", null: false
+    t.string "type", null: false
+    t.jsonb "params"
+    t.datetime "read_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["read_at"], name: "index_notifications_on_read_at"
+    t.index ["recipient_type", "recipient_id"], name: "index_notifications_on_recipient"
+
   create_table "taggings", force: :cascade do |t|
     t.bigint "tag_id", null: false
     t.bigint "upload_id", null: false
@@ -76,6 +106,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_10_004052) do
     t.integer "views", default: 0
     t.bigint "user_id", null: false
     t.string "file"
+    t.boolean "downloadable", default: false
     t.index ["user_id"], name: "index_uploads_on_user_id"
   end
 
@@ -100,7 +131,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_10_004052) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+
+  add_foreign_key "collections", "users"
+  add_foreign_key "likes", "uploads"
+  add_foreign_key "likes", "users"
+
   add_foreign_key "taggings", "tags"
   add_foreign_key "taggings", "uploads"
+
   add_foreign_key "uploads", "users"
 end

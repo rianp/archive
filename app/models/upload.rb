@@ -8,6 +8,11 @@ class Upload < ApplicationRecord
   has_one_attached :thumbnail
   has_one_attached :file
 
+  has_many :likes, dependent: :destroy
+
+  has_noticed_notifications model_name: 'Notification'
+  has_many :notifications, through: :user, dependent: :destroy
+
   def tag_list
     self.tags.collect do |tag|
       tag.name
@@ -19,4 +24,5 @@ class Upload < ApplicationRecord
     new_or_found_tags = tag_names.collect { |name| Tag.find_or_create_by(name: name) }
     self.tags = new_or_found_tags
   end
+
 end

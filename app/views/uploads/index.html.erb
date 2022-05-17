@@ -1,9 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
 <div class="container">
-  <div class="mt-5 p-5 box-rounded border-fill bg-white">
-    <h1 class="page-header">archive</h1>
+  <div class="box-rounded text-center">
+
+    <div class="btn-group mb-5">
+      <button class="btn bg-blue fs-6 py-3 px-5 btn-rounded"><strong> assets </strong></button>
+      <a href="<%= collections_path %>"><button class="btn bg-mint fs-6 py-3 px-5 right-rounded"><strong> collections </strong></button></a>
+    </div>
+    <br/>
+
     <%= render 'search/form' %>
 
-    <div class="upload-gallery justify-content-around my-5 mx-auto">
+    <div class="upload-gallery justify-content-around mx-auto">
       <% @uploads.shuffle.each do |upload| %>
         <div id="uploads">
           <%= render upload %>
@@ -13,7 +21,4 @@
     
   </div>
 </div>
-
-
-
 
