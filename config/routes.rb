@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get 'manage', to: 'uploads#manage'
 
   resources :uploads
+  resources :tags
   
   get 'search', to: 'search#index'
   get 'archive', to: 'uploads#index'
