@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="mt-5 p-5 box-rounded border-fill bg-white">
+  <div class="mt-5 box-rounded border-fill bg-white">
 
-    <div class="d-flex justify-content-around profile-box">
-      <div class="border-fill box-rounded col-4 p-3 my-3">
+    <div class="d-flex justify-content-around profile-box mb-0">
+      <div class="border-fill box-rounded text-center col-4 p-3">
 
         <% if @user.avatar.attached? %>
           <img src="<%= (url_for(@user.avatar)) %>" class="avatar">
@@ -11,32 +11,32 @@
         <% end %>
 
         <div class="my-3">
-          <h1 class="pt-2"><%= @user.username %></h1>
+          <h4><%= @user.username %></h4>
 
           <% if @user.tagline %>
-            <h4><%= @user.tagline %></h4>
+            <h5><%= @user.tagline %></h5>
           <% end %>
 
-          <p class="fs-5">member since: <%= @user.created_at.strftime("%B") %> <%= @user.created_at.year %></p>
-          <p class="fs-5"><i class="bi bi-eye-fill eye-color"></i> <%= @user.views %></p>
+          <p>member since: <%= @user.created_at.strftime("%B") %> <%= @user.created_at.year %></p>
+          <p><i class="bi bi-eye-fill eye-color"></i> <%= @user.views %></p>
 
         </div>
       </div>
 
       <div class="col-6 py-5 text-start">
         <% if @user.bio %>
-          <h4>about</h4>
-          <p class="fs-5"><%= @user.bio %></p>
+          <h5>about</h5>
+          <p><%= @user.bio %></p>
         <% end %>
 
         <% if @user.website %>
-          <h4>website</h4>
-          <a href="<%= @user.website %>" class="fs-5"><%= @user.website %></a>
+          <h5>website</h5>
+          <a href="<%= @user.website %>"><%= @user.website %></a>
         <% end %>
         <br/><br/>
 
         <% unless @user.email == [] %>
-          <span class="fs-4">
+          <span>
             <a href="https://instagram.com"><i class="bi bi-instagram me-3"></i></a>
             <a href="https://facebook.com"><i class="bi bi-facebook me-3"></i></a>
             <a href="https://twitter.com"><i class="bi bi-twitter me-3"></i></a>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <h1 class="text-start mx-5 px-5"><%= pluralize(Upload.where(user_id: @user).count, "asset") %></h6>
+    <h5 class="text-start mx-5 px-5"><%= pluralize(Upload.where(user_id: @user).count, "asset") %></h5>
     <hr>
     <div class="upload-gallery justify-content-around my-2 mx-auto">
       <% Upload.where(user_id: @user).each do |upload| %>

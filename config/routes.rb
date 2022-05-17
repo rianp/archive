@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :likes
+  resources :collections
 
   authenticated :user, ->(user) { user.admin? } do
     get 'admin', to: 'admin#index'
@@ -15,7 +17,11 @@ Rails.application.routes.draw do
   get 'users/profile'
   get '/u/:id', to: 'users#profile', as: 'user'
 
-  get 'users/manage'
+  resources :uploads do
+    resources :likes
+  end
+  
+  get 'manage', to: 'uploads#manage'
 
   resources :uploads
   

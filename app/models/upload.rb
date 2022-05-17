@@ -5,4 +5,9 @@ class Upload < ApplicationRecord
 
   has_one_attached :thumbnail
   has_one_attached :file
+
+  has_many :likes, dependent: :destroy
+
+  has_noticed_notifications model_name: 'Notification'
+  has_many :notifications, through: :user, dependent: :destroy
 end
