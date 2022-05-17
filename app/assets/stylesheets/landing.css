@@ -1,0 +1,6 @@
+.bg-swirl {
+  background-image: url("layout/splash.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}

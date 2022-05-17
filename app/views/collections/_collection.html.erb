@@ -1,0 +1,24 @@
+<div id="<%= dom_id collection %>">
+
+  <div class="border-fill box-rounded card-size my-5">
+    <a href="<%= collection_path(collection) %>">
+      <%= image_tag "keroppi.jpg", class: "top-rounded card-img" %>
+    </a>
+    <div class="card-body">
+      <div class="card-text">
+
+      <p>
+        <strong>Name:</strong>
+        <%= collection.name %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= collection.description %>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
