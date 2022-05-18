@@ -12,11 +12,6 @@ a{
   text-decoration: none;
 }
 
-.card-text a{
-  color: rgba(57, 0, 255) !important;
-  text-decoration: underline;
-}
-
 .nav-circle {
   background: rgba(57, 0, 255);
   height: 100px;
@@ -29,29 +24,6 @@ a{
   font-weight: bold;
 }
 
-
-a:hover {
-  color: rgba(57, 0, 255) !important;
-}
-
-.nav-rounded {
-  border-radius: 50px;
-}
-
-.card-head {
-  background: #94ffe1;
-}
-
-.card-size {
-  width: 20rem;
-  height: 30rem;
-}
-
-.card-img {
-  height: 17rem;
-  width: 19.45rem;
-  object-fit: cover;
-}
 
 .border-fill {
   background: rgb(162, 255, 230);
@@ -72,6 +44,53 @@ a:hover {
   box-shadow: 12px 15px 20px rgba(57, 0, 255, 0.5);
   border-radius: 50px;
   text-align: center;
+}
+
+
+a:hover {
+  color: rgba(57, 0, 255) !important;
+}
+
+.nav-rounded {
+  border-radius: 50px;
+}
+
+/* .card-text a{
+  color: rgba(57, 0, 255) !important;
+  text-decoration: underline;
+} */
+
+.card-head {
+  background: #94ffe1;
+}
+
+.card-size {
+  height: 22rem;
+  width: 15rem;
+}
+
+.card-img {
+  height: 13rem;
+  width: 14.45rem;
+  object-fit: cover;
+}
+
+.horizontal-card-img {
+  height: 7.6rem;
+  width: 7.5rem;
+  border-radius: 50px 0px 0px 50px;
+  object-fit: cover;
+}
+
+.about-card-img {
+  max-width: 25rem;
+  border-radius: 50px 0px 0px 0px;
+  object-fit: cover;
+}
+
+.card-horizontal {
+  width: 15rem;
+  height: 8rem;
 }
 
 .box-show {
@@ -115,6 +134,10 @@ a:hover {
   font-size: 5em;
   color: white;
   text-shadow: 2px 0 4px rgba(57, 0, 255), 0 2px 4px rgba(57, 0, 255), -2px 0 4px rgba(57, 0, 255), 0 -2px 4px rgba(57, 0, 255);
+}
+
+.sub-header {
+  font-size: 4em;
 }
 
 .page-header {
@@ -173,24 +196,6 @@ a:hover {
 
 .cloud-color {
   color: rgba(57, 0, 255);
-}
-
-.horizontal-card-img {
-  height: 7.6rem;
-  width: 7rem;
-  border-radius: 50px 0px 0px 50px;
-  object-fit: cover;
-}
-
-.about-card-img {
-  height: auto;
-  border-radius: 50px 0px 0px 50px;
-  object-fit: cover;
-}
-
-.card-horizontal {
-  width: 17rem;
-  height: 8rem;
 }
 
 .viewer-img {

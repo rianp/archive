@@ -120,32 +120,32 @@
 
           <!-- license info -->
           <div>
-            <p class="text-secondary mb-1">license: ffftkkk <a href="#" class="a-gray">(learn more)</a></p>
+            <p class="text-secondary mb-0">license: ffftkkk <a href="#" class="a-gray">(learn more)</a></p>
           </div>
 
           <!-- upload date -->
           <div>
-            <p class="text-secondary mb-2"><i class="bi bi-clock pe-3"></i>uploaded <%= time_ago_in_words(@upload.created_at) %> ago</p>
+            <p class="text-secondary mb-0"><i class="bi bi-clock pe-3"></i>uploaded <%= time_ago_in_words(@upload.created_at) %> ago</p>
           </div>
 
           <!-- categories -->
           <div class="d-flex py-1">
             <i class="bi bi-archive pe-2 mb-0 text-secondary"></i>
-            <button type="button" class="btn btn-sm btn-outline-primary mx-2 px-3">category 1</button>
-            <button type="button" class="btn btn-sm btn-outline-primary mx-2 px-3">category 2</button>
+            <button type="button" class="btn btn-sm btn-outline-primary mx-2 px-3">collection 1</button>
+            <button type="button" class="btn btn-sm btn-outline-primary mx-2 px-3">collection 2</button>
           </div>
           
 
           <!-- tags -->
-          <div class="d-flex py-1">
-            <i class="bi bi-tags pe-2 mb-0 text-secondary"></i>
+          <div class="d-flex align-items-middle py-0">
+            <i class="bi bi-tags py-0 pe-1 mb-0 text-secondary"></i>
             <% @upload.tags.each do |tag| %>
               <button type="button" class="btn btn-sm btn-outline-primary mx-2 px-3"><%= link_to tag.name, tag_path(tag) %></button>
             <% end %>
           </div>
 
           <!-- users who liked this -->
-          <div class="d-flex py-1 mb-1">
+          <div class="d-flex align-items-middle py-0 mb-0">
               <i class="bi bi-bookmark-heart pe-3 mb-0 text-secondary"></i>
               <!-- avatars -->
                 <a href="<%= user_path(1) %>">

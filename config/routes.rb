@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :likes
   resources :collections
 
@@ -29,7 +30,7 @@ Rails.application.routes.draw do
   get 'search', to: 'search#index'
   get 'archive', to: 'uploads#index'
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'contacts#new'
   get 'resources', to: 'pages#resources'
 
   root 'pages#landing'
