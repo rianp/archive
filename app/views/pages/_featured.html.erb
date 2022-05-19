@@ -10,7 +10,7 @@
       <%= upload.description %>
     </div>
 
-    <div>
+    <div class="container box-rounded bg-white viewer">
       <% if upload.file.attached? %>
         <%= render 'uploads/3d_viewer', upload: upload %>
       <% elsif upload.thumbnail.attached? %>
