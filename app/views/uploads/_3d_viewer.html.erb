@@ -1,11 +1,10 @@
-<div class="container box-rounded bg-white viewer">
 
   <!-- need to make viewer larger & centered in div -->
   <model-viewer 
+    id="reveal"
     alt="<%= upload.description %>" 
     src="<%= (url_for(upload.file)) %>" 
     seamless-poster shadow-intensity="1" 
     camera-controls enable-pan>
   </model-viewer>
 
-</div>
