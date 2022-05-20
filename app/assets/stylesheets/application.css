@@ -1,24 +1,10 @@
-.bg-swirl {
-  background-image: url("swirl.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .upload-gallery {
   display: flex;
   flex-wrap: wrap;
 }
 
-.nav-circle {
-  background: #192eee;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-}
-
-.nav-pad {
-  padding: 0 25px;
+body {
+  font-family: 'Anek Latin', sans-serif;
 }
 
 a{
@@ -26,49 +12,85 @@ a{
   text-decoration: none;
 }
 
+.nav-circle {
+  background: rgba(57, 0, 255);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.nav-pad {
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+
+.border-fill {
+  background: rgb(162, 255, 230);
+  border-color: rgba(57, 0, 255);
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 1px 0 40px rgba(57, 0, 255, 0.25), 0 1px 40px rgba(57, 0, 255, 0.25), -1px 0 40px rgba(57, 0, 255, 0.25), 0 -1px 40px rgba(57, 0, 255, 0.25);
+}
+
+.box-rounded {
+  border-radius: 50px;
+}
+
+.border-box-rounded {
+  border-color: rgba(57, 0, 255);
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 12px 15px 20px rgba(57, 0, 255, 0.5);
+  border-radius: 50px;
+  text-align: center;
+}
+
+
 a:hover {
-  color: #192eee !important;
+  color: rgba(57, 0, 255) !important;
 }
 
 .nav-rounded {
   border-radius: 50px;
 }
 
+/* .card-text a{
+  color: rgba(57, 0, 255) !important;
+  text-decoration: underline;
+} */
+
 .card-head {
-  background: #b5f9e5;
+  background: #94ffe1;
 }
 
 .card-size {
-  width: 20rem;
-  height: 30rem;
+  height: 22rem;
+  width: 15rem;
 }
 
 .card-img {
-  height: 17rem;
-  width: 19.45rem;
+  height: 13rem;
+  width: 14.45rem;
   object-fit: cover;
 }
 
-.border-fill {
-  background: #b5f9e5;
-  border-color: #192eee;
-  border-style: solid;
-  border-width: 5px;
-  box-shadow: 12px 15px 20px #192eee;
+.horizontal-card-img {
+  height: 7.6rem;
+  width: 7.5rem;
+  border-radius: 50px 0px 0px 50px;
+  object-fit: cover;
 }
 
-.box-rounded {
-  border-radius: 50px;
-  text-align: center;
+.about-card-img {
+  max-width: 25rem;
+  border-radius: 50px 0px 0px 0px;
+  object-fit: cover;
 }
 
-.border-box-rounded {
-  border-color: #192eee;
-  border-style: solid;
-  border-width: 5px;
-  box-shadow: 12px 15px 20px #192eee;
-  border-radius: 50px;
-  text-align: center;
+.card-horizontal {
+  width: 15rem;
+  height: 8rem;
 }
 
 .box-show {
@@ -93,16 +115,29 @@ a:hover {
 
 .side-rounded {
   border-radius: 50px 50px 50px 50px;
-  background: #b5f9e5;
-  border-color: #192eee;
+  background: rgb(162, 255, 230);
+  border-color: rgba(57, 0, 255);
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
 }
 
 .cripping-header {
+  position: absolute;
+  font-size: 5em;
+  color: white;
+  text-shadow: 2px 0 15px rgba(57, 0, 255, 0.5), 0 2px 15px rgba(57, 0, 255, 0.5), -2px 0 15px rgba(57, 0, 255, 0.5), 0 -2px 15px rgba(57, 0, 255, 0.5);
+}
+
+.cripping-header2 {
+  z-index: 1;
   margin: 20px 0;
-  font-size: 6em;
-  text-align: center;
+  font-size: 5em;
+  color: white;
+  text-shadow: 2px 0 4px rgba(57, 0, 255), 0 2px 4px rgba(57, 0, 255), -2px 0 4px rgba(57, 0, 255), 0 -2px 4px rgba(57, 0, 255);
+}
+
+.sub-header {
+  font-size: 4em;
 }
 
 .page-header {
@@ -116,12 +151,12 @@ a:hover {
 }
 
 .avatar {
-  border-color: #192eee;
+  border-color: rgba(57, 0, 255);
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
   border-radius: 50%;
-  height: 15rem;
-  width: 15rem;
+  height: 10rem;
+  width: 10rem;
   object-fit: cover;
 }
 
@@ -142,7 +177,6 @@ a:hover {
   object-fit: cover;
 }
 
-
 .profile-box {
   height: 30rem;
   position: relative;
@@ -161,54 +195,42 @@ a:hover {
 }
 
 .cloud-color {
-  color: #192eee;
-}
-
-.horizontal-card-img {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50px 0px 0px 50px;
-  object-fit: cover;
-}
-
-.card-horizontal {
-  width: 20rem;
-  height: 10.6rem;
+  color: rgba(57, 0, 255);
 }
 
 .viewer-img {
   width: 100%;
-  height: 28rem;
+  height: 20rem;
   object-fit: cover;
 }
 
 .btn-outline-primary {
-  border-color: #192eee !important;
-  color: #192eee !important;
+  border-color: rgba(57, 0, 255) !important;
+  color: rgba(57, 0, 255) !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: #192eee !important;
+  background-color: rgba(57, 0, 255) !important;
   color: white !important;
 }
 
 .bg-blue {
-  background-color: #192eee !important;
-  border-color: #192eee !important;
+  background-color: rgba(57, 0, 255) !important;
+  border-color: rgba(57, 0, 255) !important;
   border-style: solid;
   border-width: 2px;
   color: white;
 }
 
 .bg-mint {
-  background-color: #b5f9e5 !important;
-  border-color: #192eee !important;
+  background: rgb(162, 255, 230);
+  border-color: rgba(57, 0, 255) !important;
   border-style: solid;
   border-width: 2px;
 }
 
 .btn-primary {
-  background-color: #192eee !important;
+  background-color: rgba(57, 0, 255) !important;
 }
 
 .btn-outline-danger {
@@ -223,6 +245,10 @@ a:hover {
 
 .a-gray {
     color: gray !important;
+}
+
+.btn-rounded {
+  border-radius: 50px 50px 50px 50px;
 }
 
 .left-rounded {

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :resources
+  resources :contacts
+  resources :likes
+  resources :collections
 
   authenticated :user, ->(user) { user.admin? } do
     get 'admin', to: 'admin#index'
@@ -15,7 +19,11 @@ Rails.application.routes.draw do
   get 'users/profile'
   get '/u/:id', to: 'users#profile', as: 'user'
 
-  get 'users/manage'
+  resources :uploads do
+    resources :likes
+  end
+  
+  get 'manage', to: 'uploads#manage'
 
   resources :uploads
   resources :tags
@@ -23,7 +31,7 @@ Rails.application.routes.draw do
   get 'search', to: 'search#index'
   get 'archive', to: 'uploads#index'
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'contacts#new'
   get 'resources', to: 'pages#resources'
 
   root 'pages#landing'

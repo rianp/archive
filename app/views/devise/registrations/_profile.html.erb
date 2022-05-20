@@ -1,10 +1,9 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <h3>update profile</h3>
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.text_field :username, class: "border-fill box-rounded bg-white", style: "margin: 20px; padding: 0px 20px;" %>
   </div>
 
   <div class="field">
@@ -14,21 +13,21 @@
 
   <div class="field">
     <%= f.label :tagline %><br />
-    <%= f.text_field :tagline %>
+    <%= f.text_field :tagline, class: "border-fill box-rounded bg-white", style: "margin: 20px; padding: 0px 20px;" %>
   </div>
 
   <div class="field">
     <%= f.label :bio %><br />
-    <%= f.text_area :bio %>
+    <%= f.text_area :bio, :cols => 40, :rows => 10, class: "border-fill box-rounded bg-white", style: "padding: 20px 20px;"  %>
   </div>
 
   <div class="field">
     <%= f.label :website %><br />
-    <%= f.text_field :website %>
+    <%= f.text_field :website, class: "border-fill box-rounded bg-white", style: "margin: 20px; padding: 0px 20px;" %>
   </div>
 
 
   <div class="actions">
-    <%= f.submit "update" %>
+    <%= f.submit "update", :class => "btn-primary btn-rounded", :style => "padding: 0px 20px;" %>
   </div>
 <% end %>
