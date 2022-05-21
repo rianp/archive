@@ -75,6 +75,10 @@ a:hover {
   object-fit: cover;
 }
 
+.image-container {
+  position: relative; 
+}
+
 .overlay {
   background-color: #b5f9e5;
   box-shadow: 0px -10px 5px 0px #192eee;
@@ -82,7 +86,7 @@ a:hover {
   color: #b5f9e5;
   bottom: 0px;
   width: 100%;
-  margin
+  margin: 0;
 }
 
 .horizontal-card-img {
