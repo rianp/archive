@@ -87,17 +87,4 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
-
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
-
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  :user_name => 'd1847e5b60ccf7',
-  :password => '6e8382e326ba01',
-  :address => 'smtp.mailtrap.io',
-  :domain => 'smtp.mailtrap.io',
-  :port => '2525',
-  :authentication => :cram_md5
-}
 end
