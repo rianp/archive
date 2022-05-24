@@ -9,7 +9,9 @@
     </div>
     <br/>
 
-    <%= render 'search/form' %>
+    <div class="mb-5">
+      <%= render 'search/form' %>
+    </div>
 
     <div class="upload-gallery justify-content-around mx-auto">
       <% @uploads.shuffle.each do |upload| %>

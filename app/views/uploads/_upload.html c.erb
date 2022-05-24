@@ -1,16 +1,16 @@
 <div id="<%= dom_id upload %>">
   
-  <div>
-    <a href="<%= upload_path(upload) %>">
-      <% if upload.thumbnail.attached? %>
-        <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded card-top border-fill">
-      <% else %>
-        <%= image_tag "avatar.png", class: "top-rounded card-top" %>
-      <% end %>
-    </a>
-
-    <div class="card-bottom box-rounded border-fill py-4">
-      <div>
+  <div class="card-size my-5">
+    <div class="card-img">
+      <a href="<%= upload_path(upload) %>">
+        <% if upload.thumbnail.attached? %>
+          <img src="<%= (url_for(upload.thumbnail)) %>" class="top-rounded border-fill card-img">
+        <% else %>
+          <%= image_tag "avatar.png", class: "overlay top-rounded card-img" %>
+        <% end %>
+      </a>
+      <div class="overlay border-fill box-rounded">
+        <div>
         <a href="<%= upload_path(upload) %>">
           <h4 class="mb-1"><%= upload.name %></h4>
           <p class="mb-2"><%= upload.description %></p>
@@ -26,18 +26,21 @@
               <% end %>
             </a>
           </div>
-
           <div>
             <p class="fs-4"><i class="bi bi-heart-fill pink-heart"></i> 4</p>
           </div>
-
           <div>
             <p class="fs-4"><i class="bi bi-eye-fill eye-color"></i> <%= upload.views %></p>
           </div>
-          
         </div>
       </div>
     </div>
-
+    
+    <div class="card-body  py-0">
+      
+      </div>
+      
+    </div>
   </div>
+
 </div>
