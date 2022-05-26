@@ -99,13 +99,13 @@
                 <% filesize = 0 %>
               <% end %>
 
-              <a href="#" class="text-start"><p class="fs-5 mb-0 a-gray"><i class="bi bi-cloud-download cloud-color fs-4 me-2"></i> <%= link_to 'Download', @upload.file, download: '' %> (<%= filesize %>mb)</p></a>
+              <a href="#" class="text-start"><p class="mb-0 a-gray"><i class="bi bi-cloud-download cloud-color me-2"></i> <%= link_to 'Download', @upload.file, download: '' %> (<%= filesize %>mb)</p></a>
             </div>
-            <div class="d-flex justify-content-start align-items-end">
-              <a href="#" class="text-start"><p class="mb-0 a-gray"><i class="bi bi-folder-plus fs-4 me-2 text-secondary"></i> add to collection</p></a>
+            <div class="d-flex justify-content-start align-items-end my-1">
+              <a href="#" class="text-start"><p class="mb-0 a-gray"><i class="bi bi-folder-plus me-2 text-secondary"></i> add to collection</p></a>
             </div>
             <div class="d-flex justify-content-end align-items-end">
-              <a href="#" class="text-end"><p class="mb-0 a-gray"><i class="bi bi-flag-fill fs-4 me-2 text-secondary"></i> report</p></a>
+              <a href="#" class="text-end"><p class="mb-0 a-gray"><i class="bi bi-flag-fill me-2 text-secondary"></i> report</p></a>
             </div>
           </div>
           <hr class="mt-2"/>
@@ -175,13 +175,13 @@
       <!-- right sidebar: links -->
       <div class="col-4 hide-mobile">
         <div class="text-start p-4 mb-4">
-          <h5 class="text-start">in collections</h5>
+          <h5 class="text-start"><strong>in collections</strong></h5>
           <a href=""><p>image/link: collection 1</p></a>
           <a href=""><p>image/link: collection 2</p></a>
           <a href=""><p>image/link: collection 3</p></a>
         </div>
         <div class="mt-2">
-          <h5 class="text-start mt-2 px-4">more by <%= @upload.user.username %></h5>
+          <h5 class="text-start mt-2 px-4"><strong>more by <%= @upload.user.username %></strong></h5>
           <div class="upload-gallery justify-content-around mx-auto">
             <% Upload.where(user_id: @upload.user).limit(3).each do |upload| %>
               <div id="uploads">

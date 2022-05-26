@@ -68,8 +68,8 @@ a:hover {
 }
 
 .about-card-img {
-  max-width: 25rem;
-  border-radius: 50px 0px 0px 0px;
+  max-width: 30rem;
+  border-radius: 50px 0px 0px 50px;
   object-fit: cover;
 }
 
