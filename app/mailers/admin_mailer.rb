@@ -3,6 +3,6 @@ class AdminMailer < ActionMailer::Base
 
     def new_contact(contact)
         @contact = contact
-        mail(to: 'rianchristopher@gmail.com', subject: 'new contact')
+        mail(to: 'crippingcg@gmail.com', subject: 'new contact')
     end
 end
