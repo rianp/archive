@@ -2,7 +2,7 @@
 lock "~> 3.17.0"
 
 set :application, "archivetestdeploy"
-set :repo_url, "https://github.com/fifikim/archivetestdeploy.git"
+set :repo_url, "git://github.com/rianp/archive.git"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
